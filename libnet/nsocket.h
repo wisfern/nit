@@ -8,6 +8,7 @@
 #ifndef NSOCKET_H_
 #define NSOCKET_H_
 
+#include <stddef.h>
 #include "oswrapper.h"
 
 /**

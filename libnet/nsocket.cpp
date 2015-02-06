@@ -44,7 +44,7 @@ socket_t n_accept(socket_t fd_listen_, unsigned int timeout, char* o_remote_ip, 
 	if ((ret = n_select_read(fd_listen_, timeout)) != 1)
 		return ret;  // -1 ³ö´í£¬ 0 ³¬Ê±
 
-	if ((fd = accept(fd_listen_, (struct sockaddr *)&client, &len)) == -1)
+	if ((fd = accept(fd_listen_, (struct sockaddr *)&client, (socklen_t*)&len)) == -1)
 		return -1;
 
 	if (o_remote_ip)
